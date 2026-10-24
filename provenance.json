@@ -1,0 +1,30 @@
+{
+  "model": "holomotion-v1-3-1",
+  "submitter": "MotionChallenge",
+  "submission_type": "maintainer reproduction, not author submission",
+  "upstream": "https://github.com/HorizonRobotics/HoloMotion",
+  "source_commit": "adaacd50ada6ba9338f6c3f539093f85453e2554",
+  "checkpoint_sha256": "ae28e8e9bf39bc752e82ade5e0ea0436689dafa07af41fa39af696f6f6a2bbfe",
+  "author_inference_review": "160 matched-input cases and 4 resets compared against the current author offline observation/runtime code, including the legacy RoPE reset boundary. Maximum motor-target difference 2.15e-6 rad on macOS. Full-suite validation is separate.",
+  "benchmark_physics": "shared G1 canonical profile, not the author training simulator",
+  "redistribution": "checkpoint not distributed in Git; obtain from recorded upstream URL under its original terms",
+  "checkpoint_origin": {
+    "author_release_url": "https://github.com/HorizonRobotics/HoloMotion/tree/8e39874f63351ad74467c1c01082fcaada31885d",
+    "author_release_label": "HorizonRobotics/HoloMotion",
+    "kind": "author_file",
+    "kind_label": "Author-released checkpoint",
+    "artifact_page_url": "https://huggingface.co/HorizonRobotics/HoloMotion_models/blob/e3c90dd1f7483d02d3b4d2e5fb3a359c6ff9c67a/HoloMotion_motion_tracking_model_v1.3.1/exported/motion_tracking_model.onnx",
+    "original_filename": "HoloMotion_motion_tracking_model_v1.3.1/exported/motion_tracking_model.onnx",
+    "verification": "The adapter pins this published artifact by SHA256. Artifact identity is separate from inference parity.",
+    "download_url": "https://huggingface.co/HorizonRobotics/HoloMotion_models/resolve/e3c90dd1f7483d02d3b4d2e5fb3a359c6ff9c67a/HoloMotion_motion_tracking_model_v1.3.1/exported/motion_tracking_model.onnx",
+    "sha256": "ae28e8e9bf39bc752e82ade5e0ea0436689dafa07af41fa39af696f6f6a2bbfe"
+  },
+  "display_name": "HoloMotion v1.3.1",
+  "inference_validation": "validation/native-parity.json",
+  "deployment": {
+    "legacy_rope": "The original checkpoint has an 8192-position RoPE table but no rope_max_seq_len metadata. The pinned author runtime explicitly supports a legacy maximum-length override. Set max length8192 and its default margin64; zero KV cache and local step index at8128 without changing the reference frame or simulation state.",
+    "observation": "Original v1.3.1 author config, 522D input, current state plus 10 future references at50Hz. Matched against current author observation evaluator.",
+    "reset": "Independent motion starts clear KV cache, step index and last action. Cache-window resets retain action history and reference time.",
+    "output": "Author float32 scale and default-pose PD target; no model-specific change to benchmark physics."
+  }
+}

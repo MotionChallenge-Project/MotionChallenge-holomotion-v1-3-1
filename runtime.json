@@ -1,0 +1,64 @@
+{
+  "id": "holomotion-v1-3-1-g1-v1",
+  "entrypoint": "adapter:create",
+  "control_period_s": 0.02,
+  "reference_step_s": 0.02,
+  "reference_steps": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "reference_offsets_s": [
+    0.0,
+    0.02,
+    0.04,
+    0.06,
+    0.08,
+    0.1,
+    0.12,
+    0.14,
+    0.16,
+    0.18,
+    0.2
+  ],
+  "reference_history_s": 0,
+  "reference_preview_s": 0.2,
+  "state_access": "privileged-state-v0",
+  "action_mode": "joint-pd-feedforward",
+  "inference_config": "policy.json",
+  "inference_config_sha256": "d2ac75219c227385f271f8746a8e55392a1dae879c7dc3f67570ed9015cbe540",
+  "weights": "checkpoints/policy.onnx",
+  "weights_sha256": "ae28e8e9bf39bc752e82ade5e0ea0436689dafa07af41fa39af696f6f6a2bbfe",
+  "virtual_bodies": {
+    "left_toe_link": {
+      "parent": "left_ankle_roll_link",
+      "position_parent_m": [
+        0.1,
+        0.0,
+        -0.02
+      ]
+    },
+    "right_toe_link": {
+      "parent": "right_ankle_roll_link",
+      "position_parent_m": [
+        0.1,
+        0.0,
+        -0.02
+      ]
+    }
+  },
+  "official": false,
+  "source_repository": "https://github.com/HorizonRobotics/HoloMotion",
+  "source_commit": "adaacd50ada6ba9338f6c3f539093f85453e2554",
+  "weights_url": "https://huggingface.co/HorizonRobotics/HoloMotion_models/resolve/e3c90dd1f7483d02d3b4d2e5fb3a359c6ff9c67a/HoloMotion_motion_tracking_model_v1.3.1/exported/motion_tracking_model.onnx",
+  "motion_rope_max_seq_len": 8192,
+  "motion_rope_reset_margin": 64
+}

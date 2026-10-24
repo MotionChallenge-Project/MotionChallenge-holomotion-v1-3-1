@@ -1,0 +1,54 @@
+{
+  "status": "passed",
+  "scope": "Boundary probe with released v1.3.1 ONNX and unmodified latest-author reset method. Explicit legacy max length8192 is supported by current author initialization; margin64. Synthetic zero observations, not a full rollout or full new-runtime observation parity.",
+  "checkpoint_sha256": "ae28e8e9bf39bc752e82ade5e0ea0436689dafa07af41fa39af696f6f6a2bbfe",
+  "author_runtime_commit": "adaacd50ada6ba9338f6c3f539093f85453e2554",
+  "records": [
+    {
+      "requested_index": 8126,
+      "effective_index": 8126,
+      "cache_reset": false,
+      "reference_frame_preserved": true,
+      "finite": true
+    },
+    {
+      "requested_index": 8127,
+      "effective_index": 8127,
+      "cache_reset": false,
+      "reference_frame_preserved": true,
+      "finite": true
+    },
+    {
+      "requested_index": 8128,
+      "effective_index": 0,
+      "cache_reset": true,
+      "reference_frame_preserved": true,
+      "finite": true
+    },
+    {
+      "requested_index": 8129,
+      "effective_index": 0,
+      "cache_reset": true,
+      "reference_frame_preserved": true,
+      "finite": true
+    },
+    {
+      "requested_index": 8192,
+      "effective_index": 0,
+      "cache_reset": true,
+      "reference_frame_preserved": true,
+      "finite": true
+    },
+    {
+      "requested_index": 16384,
+      "effective_index": 0,
+      "cache_reset": true,
+      "reference_frame_preserved": true,
+      "finite": true
+    }
+  ],
+  "remaining": [
+    "Verify new runtime observations against v1.3.1 configuration.",
+    "Full long-motion rollout, full40 and repeatability before ranking."
+  ]
+}
