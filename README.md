@@ -16,3 +16,9 @@ MuJoCo 3.17 CPU batch; `--jobs 8` sets parallelism. Missing data and weights are
 downloaded and hash-checked; results and traces stay outside Git.
 
 [Inference validation](validation/README.md) · [Native parity report](validation/native-parity.json)
+
+## Observation track
+
+Default: **ideal proprioception, no global position feedback**. [Admission and special handling](admission.json) · [Rules](MotionChallenge-Core/docs/OBSERVATIONS.md).
+
+For the original privileged-state track: `uv run evaluate.py --track privileged`.
