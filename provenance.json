@@ -5,7 +5,7 @@
   "upstream": "https://github.com/HorizonRobotics/HoloMotion",
   "source_commit": "adaacd50ada6ba9338f6c3f539093f85453e2554",
   "checkpoint_sha256": "ae28e8e9bf39bc752e82ade5e0ea0436689dafa07af41fa39af696f6f6a2bbfe",
-  "author_inference_review": "160 matched-input cases and 4 resets compared against the current author offline observation/runtime code, including the legacy RoPE reset boundary. Maximum motor-target difference 2.15e-6 rad on macOS. Full-suite validation is separate.",
+  "author_inference_review": "160 matched inputs and4 resets passed on macOS and Linux, including author legacy KV window reset transitions. Maximum motor-target difference 2.15e-6 rad on macOS and8.35e-7 rad on Linux. Full-suite verification is separate.",
   "benchmark_physics": "shared G1 canonical profile, not the author training simulator",
   "redistribution": "checkpoint not distributed in Git; obtain from recorded upstream URL under its original terms",
   "checkpoint_origin": {
@@ -26,5 +26,9 @@
     "observation": "Original v1.3.1 author config, 522D input, current state plus 10 future references at50Hz. Matched against current author observation evaluator.",
     "reset": "Independent motion starts clear KV cache, step index and last action. Cache-window resets retain action history and reference time.",
     "output": "Author float32 scale and default-pose PD target; no model-specific change to benchmark physics."
+  },
+  "inference_validation_platforms": {
+    "macOS": "validation/native-parity.json",
+    "Linux": "validation/native-parity-linux.json"
   }
 }

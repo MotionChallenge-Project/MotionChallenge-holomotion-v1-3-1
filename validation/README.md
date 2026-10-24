@@ -7,3 +7,5 @@ uv run validate_inference.py --source /path/to/pinned/HoloMotion --weights /path
 ```
 
 `legacy-window-check.json` records isolated boundary probes. Neither this probe nor the matched-input comparison replaces full motion rollout validation. The author max-length override is8192, with its default reset margin64; cache resets leave reference time and physical state unchanged.
+
+Reports: `native-parity.json` (macOS), `native-parity-linux.json` (Linux).
