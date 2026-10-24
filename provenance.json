@@ -5,7 +5,7 @@
   "upstream": "https://github.com/HorizonRobotics/HoloMotion",
   "source_commit": "adaacd50ada6ba9338f6c3f539093f85453e2554",
   "checkpoint_sha256": "ae28e8e9bf39bc752e82ade5e0ea0436689dafa07af41fa39af696f6f6a2bbfe",
-  "author_inference_review": "160 matched inputs and4 resets passed on macOS and Linux, including author legacy KV window reset transitions. Maximum motor-target difference 2.15e-6 rad on macOS and8.35e-7 rad on Linux. Full-suite verification is separate.",
+  "author_inference_review": "Numerical comparison against pinned author inference: validation/native-parity.json",
   "benchmark_physics": "shared G1 canonical profile, not the author training simulator",
   "redistribution": "checkpoint not distributed in Git; obtain from recorded upstream URL under its original terms",
   "checkpoint_origin": {

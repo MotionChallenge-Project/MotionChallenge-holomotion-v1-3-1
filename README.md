@@ -12,7 +12,7 @@ uv run evaluate.py
 ```
 
 Produces success, completion and six MPBPE values in a verified `result.json`.
-MuJoCo 3.17 CPU batch; `--jobs 8` sets parallelism. Missing data and weights are
+MuJoCo 3.17 CPU batch; `--jobs` sets parallelism. Missing data and weights are
 downloaded and hash-checked; results and traces stay outside Git.
 
 [Inference validation](validation/README.md) · [Native parity report](validation/native-parity.json)
