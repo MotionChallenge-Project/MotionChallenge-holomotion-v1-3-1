@@ -1,6 +1,6 @@
 {
   "id": "holomotion-v1-3-1-g1-v1",
-  "entrypoint": "adapter:create",
+  "entrypoint": "restricted:create",
   "control_period_s": 0.02,
   "reference_step_s": 0.02,
   "reference_steps": [
@@ -31,7 +31,7 @@
   ],
   "reference_history_s": 0,
   "reference_preview_s": 0.2,
-  "state_access": "privileged-state-v0",
+  "state_access": "ideal-proprioceptive-no-position-v1",
   "action_mode": "joint-pd-feedforward",
   "inference_config": "policy.json",
   "inference_config_sha256": "d2ac75219c227385f271f8746a8e55392a1dae879c7dc3f67570ed9015cbe540",
@@ -61,12 +61,8 @@
   "weights_url": "https://huggingface.co/HorizonRobotics/HoloMotion_models/resolve/e3c90dd1f7483d02d3b4d2e5fb3a359c6ff9c67a/HoloMotion_motion_tracking_model_v1.3.1/exported/motion_tracking_model.onnx",
   "motion_rope_max_seq_len": 8192,
   "motion_rope_reset_margin": 64,
-  "default_track": "ideal-proprioception",
-  "observation_tracks": {
-    "ideal-proprioception": {
-      "entrypoint": "restricted:create",
-      "admission_record": "admission.json",
-      "admission_sha256": "8a2b15471bab6656affe1aaa3134b7d2d7d2fecc53a537e1296598d477563d6b"
-    }
+  "observation_contract": {
+    "admission_record": "admission.json",
+    "admission_sha256": "8a2b15471bab6656affe1aaa3134b7d2d7d2fecc53a537e1296598d477563d6b"
   }
 }
