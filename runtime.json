@@ -63,6 +63,8 @@
   "motion_rope_reset_margin": 64,
   "observation_contract": {
     "admission_record": "admission.json",
-    "admission_sha256": "908a40e93096f7496c1fbe33b0f16693401247215b3ebcd9bec2673181d6fae2"
-  }
+    "admission_sha256": "332e2257205de415c0eb5f9245078ab376b4bf2e5ec72fce67aced5ffcd8d42e"
+  },
+  "batch_entrypoint": "parallel:create",
+  "inference_workers": 4
 }
