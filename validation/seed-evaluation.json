@@ -1,0 +1,60 @@
+{
+  "status": "full_rollout_and_independent_trace_verified",
+  "dataset": "seed",
+  "result_sha256": "837f49ece9f3600121a65e68776b5265b0b85f62d93d82816c39d4dc34820d3a",
+  "runtime_sha256": "1913f472acacd4820297ffd083cd137d0d7d641e51a4b4834e35a0b948edf525",
+  "protocol_sha256": "3900f88a933613534e896fcd6732fa19bde6ed772d36cad017b9cb7f0e8269b7",
+  "checkpoint_sha256": "ae28e8e9bf39bc752e82ade5e0ea0436689dafa07af41fa39af696f6f6a2bbfe",
+  "engine": {
+    "backend": "mjwarp",
+    "precision": "torch.float32",
+    "versions": {
+      "mujoco": "3.11.0",
+      "mujoco-warp": "3.11.0",
+      "warp-lang": "1.18.0",
+      "torch": "2.14.1"
+    },
+    "worlds": 4096,
+    "substeps": 4,
+    "nconmax": 100,
+    "njmax": 4096,
+    "cuda_graph": true
+  },
+  "summary": {
+    "success_count": 125987,
+    "completion": 0.9833193380439875,
+    "full": {
+      "mpjpe_world_m": 0.11023884199106403,
+      "mpjpe_xy_aligned_m": 0.04626435777776155,
+      "mpjpe_xy_yaw_aligned_m": 0.03934317167770612,
+      "joint_mae_rad": 0.09654201668188518,
+      "anchor_height_error_m": 0.014453751381088125,
+      "anchor_gravity_z_error": 0.022601142506328213
+    },
+    "prefix": {
+      "mpjpe_world_m": 0.09958549736033578,
+      "mpjpe_xy_aligned_m": 0.04136466904346415,
+      "mpjpe_xy_yaw_aligned_m": 0.0345709530480611,
+      "joint_mae_rad": 0.09415420880430991,
+      "anchor_height_error_m": 0.010553509629396789,
+      "anchor_gravity_z_error": 0.011252005630661008
+    }
+  },
+  "timing": {
+    "rollout_s": 979.4385738037527,
+    "vector_steps": 11620,
+    "parallel_envs": 4096,
+    "active_transitions": 47369836,
+    "mean_vector_step_ms": 84.28903389016806,
+    "transitions_per_s": 48364.27445984107,
+    "scope": "policy, physics, scoring and slot refill; excludes setup and initial reset; includes traces when enabled"
+  },
+  "independent_trace_verification": {
+    "verification": "independent_cpu_trace_recomputation_passed",
+    "clips": 129561,
+    "verifier_sha256": "822098272459bd44d65eb365cb0df9a5f3492410f63ab11cf055669b3a52237a",
+    "max_metric_abs_error": 3.92036848539945e-08,
+    "result_sha256": "837f49ece9f3600121a65e68776b5265b0b85f62d93d82816c39d4dc34820d3a",
+    "scope": "Trace consistency only; a separate clean rerun is still required"
+  }
+}

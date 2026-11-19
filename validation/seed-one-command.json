@@ -1,0 +1,9 @@
+{
+  "status": "complete_full_rollout_and_independent_trace_verified",
+  "fresh_conversion_cache": true,
+  "independent_locked_environment": true,
+  "pythonpath_override": false,
+  "shared_original_data_and_scoring_cache": true,
+  "original_checkpoint_sha256": "ae28e8e9bf39bc752e82ade5e0ea0436689dafa07af41fa39af696f6f6a2bbfe",
+  "result_sha256": "837f49ece9f3600121a65e68776b5265b0b85f62d93d82816c39d4dc34820d3a"
+}

@@ -1,0 +1,18 @@
+{
+  "status": "passed",
+  "batch": 4096,
+  "device": "cuda:2",
+  "forward_calls": 4,
+  "environment_chunks": 1,
+  "inference_seconds": [
+    0.3893462307751179,
+    0.031176943331956863,
+    0.037258680909872055,
+    0.032177239656448364
+  ],
+  "warm_mean_seconds": 0.03353762129942576,
+  "torch_peak_allocated_bytes": 11467730432,
+  "torch_peak_reserved_bytes": 11758731264,
+  "adapter_sha256": "9db3def5fa23447944b4a75b5492781d54a502b0544ddaa3998383c08514c1bc",
+  "graph_sha256": "b223afaa1f9e4ac56fa984cc0cd662b913360a8721a0afa42c03fcadeba3ae18"
+}

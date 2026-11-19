@@ -1,0 +1,59 @@
+{
+  "state_access": "proprioceptive-no-position-no-linear-velocity-v1",
+  "checkpoint_sha256": "ae28e8e9bf39bc752e82ade5e0ea0436689dafa07af41fa39af696f6f6a2bbfe",
+  "status": "inference_verified",
+  "observation_sources": [
+    "joint_position",
+    "joint_velocity",
+    "root_orientation",
+    "root_angular_velocity",
+    "previous_actions",
+    "root_joint_motion_reference"
+  ],
+  "actual_global_position": false,
+  "actual_linear_velocity": false,
+  "reference_features": "Adapter-owned root/joint features and FK",
+  "evidence": [
+    {
+      "path": "tensor_adapter.py",
+      "sha256": "9db3def5fa23447944b4a75b5492781d54a502b0544ddaa3998383c08514c1bc"
+    },
+    {
+      "path": "convert_weights.py",
+      "sha256": "e70ec9e86ede6b375e49092452a7fbd1e223c445bc342db3a733b7ff36def390"
+    },
+    {
+      "path": "validate_tensor.py",
+      "sha256": "b02be21cc3e02b4a52e5d51631f47080374d5c93a01a9e0bb834b51c3b6a5954"
+    },
+    {
+      "path": "validate_full_batch.py",
+      "sha256": "a477120f3cf934fbdcc165a10fecd2ebf16fe0943a84a946d8b0f6dd4bd7b86a"
+    },
+    {
+      "path": "holo_torch.py",
+      "sha256": "85ccc14b09b44efee533f5c810b3094a7a49f6d902fc6a1188dd0afa94b743e0"
+    },
+    {
+      "path": "validation/inference-network-proof.json",
+      "sha256": "188e55a5855a4cfc6012592a59b7b55d6bd8936a9a653066a126af3d9e8f69c9"
+    },
+    {
+      "path": "validation/tensor-observation-parity.json",
+      "sha256": "898fa14ef2ab13ce9e306a7c9266d366037d65dfcff61eff916a745da867dbeb"
+    },
+    {
+      "path": "validation/full-batch-4096.json",
+      "sha256": "2578e6252b3b6065dc76b1ece14d7d80c24c7ace1f3fd08b860f90e6d92ed78b"
+    },
+    {
+      "path": "validation/conversion-cache-check.json",
+      "sha256": "fa983e2e046dca3fc19d5a1dd302a285019dc6cd1558ff211c7250aef8b8fe5c"
+    },
+    {
+      "path": "validation/onnxruntime-crosscheck.json",
+      "sha256": "96def30efcd1751d7580e9325296891e54fa8cbc70078767ee23e45fd4564202"
+    }
+  ],
+  "rollout_validation": "Separate dataset-specific full rollout, independent trace verification and clean reproduction reports"
+}

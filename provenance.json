@@ -5,30 +5,32 @@
   "upstream": "https://github.com/HorizonRobotics/HoloMotion",
   "source_commit": "adaacd50ada6ba9338f6c3f539093f85453e2554",
   "checkpoint_sha256": "ae28e8e9bf39bc752e82ade5e0ea0436689dafa07af41fa39af696f6f6a2bbfe",
-  "author_inference_review": "Numerical comparison against pinned author inference: validation/native-parity.json",
-  "benchmark_physics": "Shared canonical G1 nominal physics and initialization.",
+  "author_inference_review": "Original ONNX CPU/GPU tensor parity and deployment observation/history/reset checks are recorded in validation/.",
+  "benchmark_physics": "MJWarp 3.11; 20 ms control/scoring, four 5 ms physics steps, sliding friction 1.0, Newton maximum 50 iterations.",
   "redistribution": "checkpoint not distributed in Git; obtain from recorded upstream URL under its original terms",
   "checkpoint_origin": {
-    "author_release_url": "https://github.com/HorizonRobotics/HoloMotion/tree/8e39874f63351ad74467c1c01082fcaada31885d",
+    "author_release_url": "https://raw.githubusercontent.com/HorizonRobotics/HoloMotion/fcb8d4d8e96af9535c2adcc2b53e267019f865a2/README.md",
     "author_release_label": "HorizonRobotics/HoloMotion",
     "kind": "author_file",
-    "kind_label": "Author-released checkpoint",
+    "kind_label": "Author-published original ONNX",
     "artifact_page_url": "https://huggingface.co/HorizonRobotics/HoloMotion_models/blob/e3c90dd1f7483d02d3b4d2e5fb3a359c6ff9c67a/HoloMotion_motion_tracking_model_v1.3.1/exported/motion_tracking_model.onnx",
     "original_filename": "HoloMotion_motion_tracking_model_v1.3.1/exported/motion_tracking_model.onnx",
-    "verification": "The adapter pins this published artifact by SHA256. Artifact identity is separate from inference parity.",
+    "verification": "Complete original files match fixed publisher LFS SHA-256 or Git blob identities; validation/checkpoint-origin.json records every component.",
     "download_url": "https://huggingface.co/HorizonRobotics/HoloMotion_models/resolve/e3c90dd1f7483d02d3b4d2e5fb3a359c6ff9c67a/HoloMotion_motion_tracking_model_v1.3.1/exported/motion_tracking_model.onnx",
-    "sha256": "ae28e8e9bf39bc752e82ade5e0ea0436689dafa07af41fa39af696f6f6a2bbfe"
+    "sha256": "ae28e8e9bf39bc752e82ade5e0ea0436689dafa07af41fa39af696f6f6a2bbfe",
+    "evidence": "validation/checkpoint-origin.json"
   },
   "display_name": "HoloMotion v1.3.1",
-  "inference_validation": "validation/native-parity.json",
+  "inference_validation": "validation/inference-network-proof.json",
   "deployment": {
-    "legacy_rope": "The original checkpoint has an 8192-position RoPE table but no rope_max_seq_len metadata. The pinned author runtime explicitly supports a legacy maximum-length override. Set max length8192 and its default margin64; zero KV cache and local step index at8128 without changing the reference frame or simulation state.",
     "observation": "Original v1.3.1 author config, 522D input, current state plus 10 future references at50Hz. Matched against current author observation evaluator.",
     "reset": "Independent motion starts clear KV cache, step index and last action. Cache-window resets retain action history and reference time.",
-    "output": "Author float32 scale and default-pose PD target; no model-specific change to benchmark physics."
+    "output": "Author float32 scale and default-pose PD target; no model-specific change to benchmark physics.",
+    "recurrent_cache": "Reset KV cache and local RoPE step at 8128; retain motion reference time and last action across cache-window resets."
   },
   "inference_validation_platforms": {
     "macOS": "validation/native-parity.json",
     "Linux": "validation/native-parity-linux.json"
-  }
+  },
+  "official_author_weights": true
 }
