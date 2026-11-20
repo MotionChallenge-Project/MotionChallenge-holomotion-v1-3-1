@@ -2,7 +2,7 @@
   "status": "full_rollout_and_independent_trace_verified",
   "dataset": "seed",
   "protocol_id": "seed-g1-29dof/mjwarp311/no-position-no-linear-velocity-v1",
-  "protocol_sha256": "3900f88a933613534e896fcd6732fa19bde6ed772d36cad017b9cb7f0e8269b7",
+  "protocol_sha256": "55667e7ee930b0cab378f6cc911b82c1107482c8d242a4d48873845eb9c2d581",
   "checkpoint_sha256": "ae28e8e9bf39bc752e82ade5e0ea0436689dafa07af41fa39af696f6f6a2bbfe",
   "runtime_sha256": "1913f472acacd4820297ffd083cd137d0d7d641e51a4b4834e35a0b948edf525",
   "source_sha256": {
@@ -158,17 +158,17 @@
     "success_count": 125987,
     "completion": 0.9833193380439875,
     "full": {
-      "mpjpe_world_m": 0.11023884199106403,
-      "mpjpe_xy_aligned_m": 0.04626435777776155,
-      "mpjpe_xy_yaw_aligned_m": 0.03934317167770612,
+      "mpkpe_world_m": 0.11023884199106403,
+      "mpkpe_xy_aligned_m": 0.04626435777776155,
+      "mpkpe_xy_yaw_aligned_m": 0.03934317167770612,
       "joint_mae_rad": 0.09654201668188518,
       "anchor_height_error_m": 0.014453751381088125,
       "anchor_gravity_z_error": 0.022601142506328213
     },
     "prefix": {
-      "mpjpe_world_m": 0.09958549736033578,
-      "mpjpe_xy_aligned_m": 0.04136466904346415,
-      "mpjpe_xy_yaw_aligned_m": 0.0345709530480611,
+      "mpkpe_world_m": 0.09958549736033578,
+      "mpkpe_xy_aligned_m": 0.04136466904346415,
+      "mpkpe_xy_yaw_aligned_m": 0.0345709530480611,
       "joint_mae_rad": 0.09415420880430991,
       "anchor_height_error_m": 0.010553509629396789,
       "anchor_gravity_z_error": 0.011252005630661008

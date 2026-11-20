@@ -49,7 +49,7 @@
     },
     "lafan-reproduction.json": {
       "status": "pipeline_reproduction_passed",
-      "sha256": "ed4edc1e4c9c39a736195f42b8752f6dcd377aa94f721d6d32b65111413477eb",
+      "sha256": "7836108760d586c3696353d82581f29e868558e2ad7bc9ff285fa54fb9c20160",
       "numerically_identical_metrics": false
     },
     "seed-one-command.json": {
